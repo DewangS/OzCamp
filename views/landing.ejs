@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OzCamp</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheet/landing.css">
+        <link rel="icon" href="/images/camping3.png">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+
+      <% if(JSON.stringify(message) != '{}'){ %>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+              <div class="alert alert-success <%= (message.success)?'':'hidden' %>" role="alert">
+                <strong><%= message.success %></strong>
+              </div>
+              <div class="alert alert-info <%= (message.info)?'':'hidden' %>" role="alert">
+                <strong><%= message.info %></strong>
+              </div>
+              <div class="alert alert-warning <%= (message.warning)?'':'hidden' %>" role="alert">
+                <strong><%= message.warning %></strong>
+              </div>
+              <div class="alert alert-danger <%= (message.danger)?'':'hidden' %>" role="alert">
+                <strong><%= message.danger %></strong>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% }  %>
+
+    <div id="landing-header">
+ 		<h1>Welcome to OzCamp!</h1>
+		<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
+    <p>
+      <form class="form-inline" action="/campgrounds" method="GET">
+        <div class="form-group">
+          <input type="text" name="search" class="form-control" placeholder="Campground search ..">
+          <button type="submit" class="btn btn-md btn-default" name="button">Search</button>
+        </div>
+      </form>
+    </p>
+
+    </div>
+
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<% include partials/footer %>

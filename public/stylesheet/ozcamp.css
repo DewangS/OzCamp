@@ -1,0 +1,146 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background: #ccccff;
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.flex-custom{
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.form-style {
+  width: 30%;
+  margin: 30px auto;
+}
+
+h1{
+  text-align: center;
+}
+
+/* Thumbnail styles */
+.thumbnail img {
+  max-height: 100%;
+  max-width: 100%;
+  border: 1px solid black;
+}
+
+.thumbnail {
+    padding: 5px;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+.full-img {
+width: 100%;
+}
+
+.pad-9px {
+  padding: 9px;
+}
+
+.inline-form {
+  display: inline;
+}
+
+.hr.style-one {
+  width: 90%;
+  color: black;
+  height: 1px;
+  background-color:black;
+  margin-bottom: 5px;
+}
+
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+hr.style-three {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.modal-button-padding {
+    padding-top: 20px;
+}
+
+.btn-app {
+    color: #fff;
+    background-color: #d92231;
+    border-color: #d92231;
+}
+
+
+.btn-custom-warning-dark {
+    color: #000;
+    background-color:#ffdab9;
+    border-color: #FF8C00;
+}
+
+.btn-custom-warning-light {
+    color: #000;
+    background-color: #ffeaab;
+    border-color: #eea236;
+}
+
+.btn-spacing {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.input-custom {
+    float: none;
+    padding-left: 0px;
+    display: block;
+}
+
+.pad-9 {
+  padding-left: 9px;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.star-img {
+  max-width: 100px;
+  max-height: 30px;
+  opacity: 0.9;
+    filter: alpha(opacity=30);
+}
+
+.list-group-item
+{
+  color: #ffffff;
+  background: #142e50;
+}
+
+.info-link
+{
+  color: #ebf0f3;
+}
+
+.info-link:hover
+{
+  color: #142e50;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OzCamp</title>
+<link rel="icon" href="/images/camping3.png">
+<script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript" src="/javascript/ozcamp.js"></script>
+<link rel="stylesheet" type="text/css" href="/lib/bootstrap/css/bootstrap.min.css">
+<script type="text/javascript"src="/lib/bootstrap/js/bootstrap.min.js"></script>
+<link rel="stylesheet" type="text/css" href="/stylesheet/ozcamp.css">
+<body>
+
+  <nav class="navbar navbar-default">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="/">OzCamp</a>
+          </div>
+          <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="<%= typeof page !== 'undefined' && page === 'campgrounds' ? 'active' : '' %>"><a href="/campgrounds">Home</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <% if(!currentUser){ %>
+                    <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+                    <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'active' : '' %>"><a href="/register">Sign Up</a></li>
+                <% } else { %>
+                    <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                    <li><a href="/logout">Logout</a></li>
+                <% } %>
+            </ul>
+          </div>
+      </div>
+  </nav>
+
+  <% if(JSON.stringify(message) != '{}'){ %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+          <div class="alert alert-success <%= (message.success)?'':'hidden' %>" role="alert">
+            <strong><%= message.success %></strong>
+          </div>
+          <div class="alert alert-info <%= (message.info)?'':'hidden' %>" role="alert">
+            <strong><%= message.info %></strong>
+          </div>
+          <div class="alert alert-warning <%= (message.warning)?'':'hidden' %>" role="alert">
+            <strong><%= message.warning %></strong>
+          </div>
+          <div class="alert alert-danger <%= (message.danger)?'':'hidden' %>" role="alert">
+            <strong><%= message.danger %></strong>
+          </div>
+          <div class="alert alert-danger <%= (message.error)?'':'hidden' %>" role="alert">
+            <strong><%= message.error %></strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% }  %>

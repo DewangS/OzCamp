@@ -1,0 +1,24 @@
+<%include ./partials/header%>
+<div class="container">
+  <div class="row">
+    <header class="">
+      <h1>Login</h1>
+   </header>
+    <div class="form-style">
+      <form class="" action="/login" method="POST">
+        <div class="form-group">
+          <input class="form-control" type="text" name="username" value="" placeholder="username">
+        </div>
+        <div class="form-group">
+          <input class="form-control"  type="password" name="password" value="" placeholder="password">
+       </div>
+        <div class="form-group text-center">
+          <input type="submit" class="btn btn-primary" value="Login">
+          <a class="btn btn-primary" href="/forgot">Reset Password</a> 
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+<%include ./partials/footer%>

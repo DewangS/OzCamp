@@ -1,0 +1,14 @@
+<% include partials/header %>
+<div class="container">
+  <header class="jumbotron">
+    <div class="container">
+      <h1>OzCamp Error!</h1>
+    </div>
+  </header>
+  <div class="row text-center">
+
+    <h2><%= (msg? msg:'An unknown error occured.') %></h2>
+    <h4>Please try again. If error persists, please contact our support team.</h4>
+  </div>
+</div>
+<% include partials/footer %>
