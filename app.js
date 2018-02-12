@@ -49,7 +49,7 @@ app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 app.use("/users", userRoutes);
 
-app.listen("3000", function(req, req){
+app.listen(process.env.PORT, function(req, req){
   console.log("OzCamp app started!!");
 });
 
